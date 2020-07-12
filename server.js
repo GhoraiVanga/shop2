@@ -1,8 +1,5 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-app.use(express.static(__dirname + '/dist/frontend'));
-app.get('/*', function(req,res) {
-  res.sendFile(path.join(__dirname+
-    '/dist/angular-on-heroku/index.html'));});
-app.listen(process.env.PORT || 8080);
+const port = process.env.PORT || 3338;
+// ...
+server.listen(port, () => {
+  console.log(`Listening on http://localhost:${port}/`);
+});
